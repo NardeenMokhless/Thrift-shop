@@ -7,8 +7,10 @@ namespace T2
     {
         public static void Main(string[] args)
         {
+            
             var dbCon = DBConnection.Instance();
             dbCon.DatabaseName = "Store";
+            
             if (dbCon.IsConnect())
             {   
                 //dbCon.createTables();
