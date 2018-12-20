@@ -1,30 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Globalization;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace T2
 {
     internal class Product
     {
-         
+        private int id;
+        private string name;
+        private string category;
+        private double price;
+        private int brand_id;
+       
         //test function
-        public void list_all_products()
+        public void getAllProductsFromDB()
         {
             MySqlConnection MyConnection = null;
-            MySqlDataReader MyReader = null;
+           // MySqlDataReader MyReader = null;
              
             MyConnection = new MySqlConnection("Server=localhost; database=Store; UID=root; password=root");
             MyConnection.Open();
              
+            /*
             MySqlCommand MyCommand = new MySqlCommand("SELECT * FROM PRODUCT", MyConnection);
             MyReader = MyCommand.ExecuteReader();
-             
-            MyReader.Close();
-            MyConnection.Close();
+
+            while (MyReader.Read())
+            {
+                 
+                Console.WriteLine(MyReader["id"]+" "+MyReader["name"]+" "+MyReader["price"]+" "+MyReader["category"]+" "+MyReader["Brand_id"]);
+            }*/
+            MySqlCommand mySqlCommand = new MySqlCommand();
+            MySqlDataReader mySqlDataReader = null;
+            //var name = from prod in Product.; 
             
-             
+            //var students = mySqlDataReader.Query<Product>("SELECT * FROM PRODUCT").ToList();
+            
+            //MyReader.Close();
+            MyConnection.Close();
         }
+        
     }
 }

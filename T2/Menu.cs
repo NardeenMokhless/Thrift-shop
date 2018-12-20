@@ -14,6 +14,8 @@ namespace T2
             if (dbCon.IsConnect())
             {   
                 //dbCon.createTables();
+                Product p = new Product();
+                p.getAllProductsFromDB();
                 Console.WriteLine( "DB connected successful" );
                 dbCon.createTables();
                 dbCon.Close();
