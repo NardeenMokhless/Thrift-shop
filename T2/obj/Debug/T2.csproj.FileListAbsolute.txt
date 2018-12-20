@@ -13,3 +13,13 @@ F:\FCI\4.1\Concepts Of Programming Languages\Assignments\Assignment#3\Task2\T2\T
 F:\FCI\4.1\Concepts Of Programming Languages\Assignments\Assignment#3\Task2\T2\T2\obj\Debug\T2.csprojResolveAssemblyReference.cache
 F:\FCI\4.1\Concepts Of Programming Languages\Assignments\Assignment#3\Task2\T2\T2\obj\Debug\T2.exe
 F:\FCI\4.1\Concepts Of Programming Languages\Assignments\Assignment#3\Task2\T2\T2\obj\Debug\T2.pdb
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\T2.exe
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\T2.pdb
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\MySql.Data.xml
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\MySql.Data.Entity.EF6.xml
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\MySql.Data.EntityFrameworkCore.xml
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\MySql.Data.EntityFrameworkCore.Design.xml
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\bin\Debug\MySql.Web.xml
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\obj\Debug\T2.csprojResolveAssemblyReference.cache
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\obj\Debug\T2.exe
+H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop\T2\obj\Debug\T2.pdb
