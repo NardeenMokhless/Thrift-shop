@@ -14,7 +14,7 @@ namespace T2
         [Column] private string name;
         [Column] private float price;
         [Column] private string category;
-        [Column] private int brand_id;
+        [Column] private int brandID;
 
         public int Id
         {
@@ -42,8 +42,8 @@ namespace T2
 
         public int BrandId
         {
-            get { return brand_id; }
-            set { brand_id = value; }
+            get { return brandID; }
+            set { brandID = value; }
         }
 
         public IEnumerable<Product> GetAllProducts(Store store)
