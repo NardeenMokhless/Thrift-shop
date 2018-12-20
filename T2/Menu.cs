@@ -14,7 +14,7 @@ namespace T2
             if (dbCon.IsConnect())
             {   
                  
-                Prod b = new Prod();
+                Product b = new Product();
                 b.test();
                 
                 Console.WriteLine("DB connected successful");

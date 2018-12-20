@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="Brand.cs" />
     <Compile Include="DB.cs" />
-    <Compile Include="Prod.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

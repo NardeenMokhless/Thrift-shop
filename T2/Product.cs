@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace T2
 {
-    internal class Prod
+    internal class Product
     {
         private int id;
         private string name;
@@ -27,9 +27,9 @@ namespace T2
             MappingSource mappingSource = new AttributeMappingSource();
             
             DataContext ds = new DataContext(co, mappingSource);
-            var prods = ds.GetTable<Prod>();
+            var prods = ds.GetTable<Product>();
             
-            IQueryable<Prod> products = from i in prods
+            IQueryable<Product> products = from i in prods
                                     select i;
             
             for (int i = 0; i < 2; i++)
