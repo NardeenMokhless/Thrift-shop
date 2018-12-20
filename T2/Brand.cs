@@ -10,7 +10,7 @@ namespace T2
     public class Brand
     {
         [Column( IsPrimaryKey = true)] private int id;
-        [Column] private string brandName;
+        [Column] private string name;
 
         public int Id
         {
@@ -20,15 +20,15 @@ namespace T2
 
         public string BrandName
         {
-            get { return brandName; }
-            set { brandName = value; }
+            get { return name; }
+            set { name = value; }
         }
 
         public string GetBrandName(int brandId, Store store)
         {
             foreach(Brand b in store.Brands)
                 if (b.id == brandId)
-                    return b.brandName;
+                    return b.name;
 
             return "no brand";
         }
