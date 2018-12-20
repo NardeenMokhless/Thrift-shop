@@ -10,6 +10,11 @@ namespace T2
           {
           }
 
+          private string get_database_config()
+          {
+               return string.Format("Server=localhost; database=Store; UID=root; password=1234", databaseName);
+          }
+
           private string databaseName = string.Empty;
           public string DatabaseName
           {
@@ -37,7 +42,7 @@ namespace T2
                {
                     if (String.IsNullOrEmpty(databaseName))
                          return false;
-                    string connstring = string.Format("Server=localhost; database=Store; UID=root; password=root", databaseName);
+                    string connstring = get_database_config();
                     connection = new MySqlConnection(connstring);
                     connection.Open();
                }
@@ -52,7 +57,7 @@ namespace T2
 
           public void createTables()
           {
-               string dbConnectionString = string.Format("Server=localhost; database=Store; UID=root; password=root", databaseName);
+               string dbConnectionString = get_database_config();
                var conn = new MySql.Data.MySqlClient.MySqlConnection(dbConnectionString);
                conn.Open();
                string createTableQuery1 = "CREATE TABLE Brand (id INT PRIMARY KEY,BrandName VARCHAR(100));";

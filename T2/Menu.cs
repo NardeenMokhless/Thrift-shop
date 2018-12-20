@@ -15,6 +15,7 @@ namespace T2
             {   
                 //dbCon.createTables();
                 Console.WriteLine( "DB connected successful" );
+                dbCon.createTables();
                 dbCon.Close();
             }
         }
