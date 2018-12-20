@@ -13,7 +13,6 @@ namespace T2
         public Table<Brand> Brands;
         
         public Store() : base("Server=Nardeen;Database=Store;Trusted_Connection=True;")
-            //hna bn7ot el connection
         {
         }
 

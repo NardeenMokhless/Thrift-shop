@@ -10,12 +10,11 @@ namespace T2
     [Table( Name = "Product" )]
     public class Product
     {
-        [Column( IsPrimaryKey = true)] private int id;
-        [Column] private string name;
-        [Column] private float price;
-        [Column] private string category;
-        [Column] private int brandID;
-
+        [Column( Name = "ID", IsPrimaryKey = true)] private int id;
+        [Column ( Name = "NAME" )] private string name;
+        [Column ( Name = "PRICE" )] private double price;
+        [Column ( Name = "CATEGORY" )] private string category;
+        [Column ( Name = "BrandID" )] private int brandID;
         public int Id
         {
             get { return id; }
@@ -28,7 +27,7 @@ namespace T2
             set { name = value; }
         }
 
-        public float Price
+        public double Price
         {
             get { return price; }
             set { price = value; }
