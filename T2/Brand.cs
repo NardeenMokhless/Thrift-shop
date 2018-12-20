@@ -25,6 +25,14 @@ namespace T2
             set { name = value; }
         }
 
+        public int GetBrandID(string brandName, Store store)
+        {
+            foreach(Brand b in store.Brands)
+                if (b.name == brandName)
+                    return b.id;
+
+            return -1;
+        }
         public string GetBrandName(int brandId, Store store)
         {
             foreach(Brand b in store.Brands)

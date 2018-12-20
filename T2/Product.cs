@@ -19,7 +19,13 @@ namespace T2
         public Product()
         {
         }
-        
+        public Product(int id, string name, double price, string category)
+        {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.category = category;
+        }
         public Product(int id, string name, double price, string category, int brandId)
         {
             this.id = id;
@@ -58,7 +64,14 @@ namespace T2
             get { return brandID; }
             set { brandID = value; }
         }
+        public bool CheckID(int id, Store store)
+        {
+            foreach(Product p in store.Products)
+                if (p.id == id)
+                    return true;
 
+            return false;
+        }
         public IEnumerable<Product> GetAllProducts(Store store)
         {
             IEnumerable<Product> products = from product in store.Products
@@ -75,10 +88,19 @@ namespace T2
             return products;
         }
 
-        public void AddNewProduct(Store store)
+        public int AddNewProduct(string brandName, Store store)
         {
+            if (CheckID(this.id, store))
+                return 0;
+            
+            Brand brand = new Brand();
+            int brandID = brand.GetBrandID(brandName, store);
+            if (brandID == -1)  
+                return -1;
+            this.BrandId = brandID;
             store.Products.InsertOnSubmit(this);  
             store.SubmitChanges();
+            return 1;
         }
 
         public void PrintProduct(Store store)
@@ -86,7 +108,8 @@ namespace T2
             Console.Write("ID: " + this.Id); 
             Console.Write(", Name: " + this.Name); 
             Console.Write(", Price: " + this.Price); 
-            Console.Write(", Category: " + this.Category); 
+            Console.Write(", Category: " + this.Category);
+            Console.Write(", BrandID: " + this.BrandId);
             
             Brand brand = new Brand();
             string brandName = brand.GetBrandName(this.BrandId, store);
