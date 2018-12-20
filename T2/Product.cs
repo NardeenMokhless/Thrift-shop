@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data; 
-using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Linq;
 
@@ -94,10 +92,10 @@ namespace T2
                 return 0;
             
             Brand brand = new Brand();
-            int brandID = brand.GetBrandID(brandName, store);
-            if (brandID == -1)  
+            int brandId = brand.GetBrandID(brandName, store);
+            if (brandId == -1)  
                 return -1;
-            this.BrandId = brandID;
+            this.BrandId = brandId;
             store.Products.InsertOnSubmit(this);  
             store.SubmitChanges();
             return 1;
@@ -163,10 +161,6 @@ namespace T2
             MyReader.Close();
             MyConnection.Close();
         }*/
-
-         
-        
-        
     }
 
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Data.Linq;
-using System.Data.Linq.Mapping;
-using System.Linq;
+﻿using System.Data.Linq.Mapping;
  
 namespace T2
 {

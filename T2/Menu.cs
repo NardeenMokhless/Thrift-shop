@@ -74,6 +74,7 @@ namespace T2
             
             MainMenu(store, product, brand);
         }
+        
         public static void Main(string[] args)
         {
             Store store = new Store();
@@ -81,6 +82,7 @@ namespace T2
             Brand brand = new Brand();
             MainMenu(store, product, brand);
         }
+        
     }
 }
 

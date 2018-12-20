@@ -1,15 +1,13 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Linq;
 
 namespace T2
 {
     [Database(Name = "Store")]
     public class Store : DataContext
     {
-        public Table<Product> Products ;
+        public Table<Product> Products;
         public Table<Brand> Brands;
         
         public Store() : base("Server=.;Database=store;Trusted_Connection=True;")
