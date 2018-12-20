@@ -55,6 +55,7 @@ namespace T2
                connection.Close();
           }
 
+          /*
           public void createTables()
           {
                string dbConnectionString = get_database_config();
@@ -67,6 +68,6 @@ namespace T2
                                           "Price Double,Category VARCHAR(100), Brand_id Int, FOREIGN KEY (Brand_id) REFERENCES Brand(id));";
                var cmd2 = new MySql.Data.MySqlClient.MySqlCommand(createTableQuery2, conn);
                cmd2.ExecuteNonQuery();  
-          }
+          }*/
      }
 }

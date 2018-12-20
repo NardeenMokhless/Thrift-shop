@@ -3,15 +3,34 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Linq;
-using MySql.Data.MySqlClient;
-
+ 
 namespace T2
 {
-    internal class Brand
+    [Table( Name = "Brand" )]
+    public class Brand
     {
-        private int id;
-        private string brandName;
-       
+        [Column( IsPrimaryKey = true)] private int id;
+        [Column] private string brandName;
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string BrandName
+        {
+            get { return brandName; }
+            set { brandName = value; }
+        }
+
+        public string GetBrandName(int brandId, Store store)
+        {
+            foreach(Brand b in store.Brands)
+                if (b.id == brandId)
+                    return b.brandName;
+
+            return "no brand";
+        }
     }
 }
