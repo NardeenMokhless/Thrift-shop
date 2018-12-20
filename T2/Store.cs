@@ -12,7 +12,7 @@ namespace T2
         public Table<Product> Products ;
         public Table<Brand> Brands;
         
-        public Store() : base("Server=Nardeen;Database=Store;Trusted_Connection=True;")
+        public Store() : base("Server=.;Database=store;Trusted_Connection=True;")
         {
         }
 

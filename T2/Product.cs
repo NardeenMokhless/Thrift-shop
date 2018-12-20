@@ -61,21 +61,21 @@ namespace T2
             return products;
         }
 
-        public void AddNewProduct(Product product, Store store)
+        public void AddNewProduct(Store store)
         {
-            store.Products.InsertOnSubmit(product);  
+            store.Products.InsertOnSubmit(this);  
             store.SubmitChanges();
         }
 
-        public void PrintProduct(Product product, Store store)
+        public void PrintProduct(Store store)
         {
-            Console.Write("ID: " + product.Id); 
-            Console.Write(", Name: " + product.Name); 
-            Console.Write(", Price: " + product.Price); 
-            Console.Write(", Category: " + product.Category); 
+            Console.Write("ID: " + this.Id); 
+            Console.Write(", Name: " + this.Name); 
+            Console.Write(", Price: " + this.Price); 
+            Console.Write(", Category: " + this.Category); 
             
             Brand brand = new Brand();
-            string brandName = brand.GetBrandName(product.BrandId, store);
+            string brandName = brand.GetBrandName(this.BrandId, store);
             Console.Write(", Brand name: " + brandName);
             Console.WriteLine();
         }

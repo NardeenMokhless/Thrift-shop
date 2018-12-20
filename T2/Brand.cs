@@ -11,6 +11,7 @@ namespace T2
     {
         [Column( IsPrimaryKey = true)] private int id;
         [Column] private string name;
+        
 
         public int Id
         {
@@ -32,5 +33,13 @@ namespace T2
 
             return "no brand";
         }
+        
+        
+        // return sorted array of brands according to number of product referencing to it 
+//        public Tuple<Brand, int>[] get_Brands(Store store)
+//        {
+//            Tuple<Brand, int>[] brands_int = new Tuple<Brand, int>[];
+//            
+//        }
     }
 }

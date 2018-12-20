@@ -9,30 +9,23 @@ namespace T2
         {
             Store store = new Store();
             Product product = new Product();
-            Console.WriteLine("DB connected successful");
-            foreach(Product p in store.Products)
-            {
-                var title = p.Name;
-                Console.WriteLine(title);
-            }
+//            for (int i = 0; i < 10; i++)
+//            {
+//                product = new Product();
+//                product.Id = i;
+//                product.Name = "Name" + i;
+//                product.Price = 30.0;
+//                product.Category = "Categorey" + i;
+//                product.BrandId = i % 4 + 1;
+//                product.AddNewProduct(store);
+//            }
 
             IEnumerable<Product> products = product.GetAllProducts(store);
-            /*for (int i = 0; i < 2; i++)
+            foreach (var pro in products)
             {
-                
+                pro.PrintProduct(store);
             }
-            /*
-            var dbCon = DBConnection.Instance();
-            dbCon.DatabaseName = "Store";
-            
-            if (dbCon.IsConnect())
-            {   
-                 
-                
-                
-                Console.WriteLine("DB connected successful");
-                dbCon.Close();
-            }*/
         }
     }
 }
+
