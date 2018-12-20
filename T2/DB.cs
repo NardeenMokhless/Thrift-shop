@@ -10,9 +10,9 @@ namespace T2
           {
           }
 
-          private string get_database_config()
+          public string get_database_config()
           {
-               return string.Format("Server=localhost; database=Store; UID=root; password=1234", databaseName);
+               return string.Format("Server=localhost; database=Store; UID=root; password=root", databaseName);
           }
 
           private string databaseName = string.Empty;
