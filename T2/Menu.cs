@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace T2
 {
@@ -9,22 +10,25 @@ namespace T2
         {
             Store store = new Store();
             Product product = new Product();
-//            for (int i = 0; i < 10; i++)
-//            {
-//                product = new Product();
-//                product.Id = i;
-//                product.Name = "Name" + i;
-//                product.Price = 30.0;
-//                product.Category = "Categorey" + i;
-//                product.BrandId = i % 4 + 1;
-//                product.AddNewProduct(store);
-//            }
 
             IEnumerable<Product> products = product.GetAllProducts(store);
-            foreach (var pro in products)
+            for(int i = 0; i < products.Count(); i++) 
             {
-                pro.PrintProduct(store);
+                Product p1 = products.ElementAt(i);
+                p1.PrintProduct(store);
+                  
             }
+            Console.WriteLine();
+
+            IEnumerable<Product> products1 = product.GetProductsLessThanSPrice(store, 50);
+            for(int i = 0; i < products1.Count(); i++) 
+            {
+                Product p1 = products1.ElementAt(i);
+                p1.PrintProduct(store);
+                  
+            }
+
+            
         }
     }
 }

@@ -15,6 +15,20 @@ namespace T2
         [Column ( Name = "PRICE" )] private double price;
         [Column ( Name = "CATEGORY" )] private string category;
         [Column ( Name = "BrandID" )] private int brandID;
+
+        public Product()
+        {
+        }
+        
+        public Product(int id, string name, double price, string category, int brandId)
+        {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.category = category;
+            brandID = brandId;
+        }
+
         public int Id
         {
             get { return id; }
