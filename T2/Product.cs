@@ -12,7 +12,7 @@ namespace T2
         [Column ( Name = "NAME" )] private string name;
         [Column ( Name = "PRICE" )] private double price;
         [Column ( Name = "CATEGORY" )] private string category;
-        [Column ( Name = "BrandID" )] private int brandID;
+        [Column ( Name = "BrandID" )] public int brandID;
 
         public Product()
         {
@@ -114,6 +114,36 @@ namespace T2
             Console.Write(", Brand name: " + brandName);
             Console.WriteLine();
         }
+
+        public void print_product_sorted_according_name(Store store, Boolean desc = false)
+        {
+            var query =
+                from product in store.Products
+                orderby product.name
+                select product;
+            var q1 = query;
+            if (desc)
+                q1 = query.OrderByDescending(x => x.name);
+            foreach (var v in q1)
+            {
+                v.PrintProduct(store);                
+            }
+        }
+        public void print_product_sorted_according_price(Store store, Boolean desc = false)
+        {
+            var query =
+                from product in store.Products
+                orderby product.price
+                select product;
+            var q1 = query;
+            if (desc)
+                q1 = query.OrderByDescending(x => x.price);
+            foreach (var v in q1)
+            {
+                v.PrintProduct(store);                
+            }
+        }
+
 
         /*
         public void test()

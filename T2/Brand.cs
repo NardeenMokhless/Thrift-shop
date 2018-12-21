@@ -1,5 +1,7 @@
-﻿using System.Data.Linq.Mapping;
- 
+﻿using System;
+using System.Data.Linq.Mapping;
+using System.Linq;
+
 namespace T2
 {
     [Table( Name = "Brand" )]
@@ -37,13 +39,22 @@ namespace T2
 
             return "no brand";
         }
+
+        public void print_brand_by_number_refereceing(Store store)
+        {
+            var query =
+                from product in store.Products
+                group product by product.brandID
+                into grouped
+                orderby grouped.Count()
+                select grouped;
+
+//            ;
+            foreach (var v in query.OrderByDescending(x => x.Count()))
+            {
+                Console.WriteLine(GetBrandName(v.Key,store) + " - " + v.Count());
+            }
+        }
         
-        
-        // return sorted array of brands according to number of product referencing to it 
-//        public Tuple<Brand, int>[] get_Brands(Store store)
-//        {
-//            Tuple<Brand, int>[] brands_int = new Tuple<Brand, int>[];
-//            
-//        }
     }
 }

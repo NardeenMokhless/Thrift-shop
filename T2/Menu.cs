@@ -74,15 +74,14 @@ namespace T2
             
             MainMenu(store, product, brand);
         }
-        
+
         public static void Main(string[] args)
         {
-            Store store = new Store();
+            Store store = new Store();            
             Product product = new Product();
             Brand brand = new Brand();
             MainMenu(store, product, brand);
         }
-        
     }
 }
 

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Nardeen\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Nardeen\.Rider2018.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Nardeen\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Nardeen\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_T2.-1226387567.00" t="ExcludeRecursive" />
-    <e p="F:\FCI\4.1\Concepts Of Programming Languages\Assignments\Assignment#3\Task2\T2" t="IncludeFlat">
+    <e p="C:\Users\mina\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\mina\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mina\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_T2.195315153.00" t="ExcludeRecursive" />
+    <e p="H:\courses\Fourth\FT\Concept\Assigment\Thrift-shop" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="T2" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
