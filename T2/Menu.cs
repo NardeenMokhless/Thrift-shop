@@ -60,6 +60,44 @@ namespace T2
             
         }
 
+        public static void ShowBrands(Store store, Brand brand)
+        {
+            brand.print_brand_by_number_refereceing(store);
+        }
+
+        public static void SortProducts(Store store, Product product)
+        {
+            Console.WriteLine("\nSorting Way:\na.Sort By Name\nb.Sort By Price\n");
+
+            Console.WriteLine("Enter the sorting way:");
+            string sortWay =  Console.ReadLine();
+
+            if (sortWay == "a")
+            {
+                Console.WriteLine("\nSorting Direction:\na.Ascending\nb.Descending\n");
+
+                Console.WriteLine("Enter the sorting direction:");
+                string sortDirection =  Console.ReadLine();
+
+                if (sortDirection == "a")
+                    product.print_product_sorted_according_name(store);
+                else
+                    product.print_product_sorted_according_name(store, true);
+            }
+            else
+            {
+                Console.WriteLine("\nSorting Direction:\na.Ascending\nb.Descending\n");
+
+                Console.WriteLine("Enter the sorting direction:");
+                string sortDirection =  Console.ReadLine();
+
+                if (sortDirection == "a")
+                    product.print_product_sorted_according_price(store);
+                else
+                    product.print_product_sorted_according_price(store, true);
+            }
+        }
+
         public static void MainMenu(Store store, Product product, Brand brand)
         {
             Console.WriteLine("<List of Actions>\n1.Show Products\n2.Add New Product\n3.Filter Products By Price\n4.Show Brands\n5.Sort Product");
@@ -71,8 +109,13 @@ namespace T2
                 AddNewProducts(store, product);
             else if (choice == 3)
                 GetProductsLessThanSPrice(store, product);
-            
-            MainMenu(store, product, brand);
+            else if (choice == 4)
+                ShowBrands(store, brand);
+            else if(choice == 5)
+                SortProducts(store, product);
+
+            else if(choice != 0)
+                MainMenu(store, product, brand);
         }
 
         public static void Main(string[] args)

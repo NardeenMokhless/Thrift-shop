@@ -49,7 +49,6 @@ namespace T2
                 orderby grouped.Count()
                 select grouped;
 
-//            ;
             foreach (var v in query.OrderByDescending(x => x.Count()))
             {
                 Console.WriteLine(GetBrandName(v.Key,store) + " - " + v.Count());
